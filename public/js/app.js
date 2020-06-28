@@ -12,6 +12,7 @@ const weatherData=document.querySelector('form')
 const search=document.querySelector('input')
 const messageOne=document.querySelector('#message-1')
 const messageTwo=document.querySelector('#message-2')
+const messageThree=document.querySelector('#message-3')
 
 messageOne.textContent = 'JavaScript'
 
@@ -28,6 +29,7 @@ weatherData.addEventListener('submit',(e) => {
         }
         else {
             messageOne.textContent=data.forecast.description
+            messageThree.textContent="Humidity is:" + data.forecast.humidity
             messageTwo.textContent=data.place_name
             //console.log(data.forecast.description)
             //console.log(data.place_name)
